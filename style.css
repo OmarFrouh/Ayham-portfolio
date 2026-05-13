@@ -30,13 +30,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  cursor: none;
 }
 
-@media (max-width: 900px) {
-  body { cursor: auto; }
-  .cursor-dot, .cursor-ring { display: none !important; }
-}
+body.cursor-enabled,
+body.cursor-enabled * { cursor: none !important; }
 
 img { display: block; max-width: 100%; height: auto; }
 
@@ -46,9 +43,7 @@ a {
   transition: color 0.2s var(--ease);
 }
 
-button { font-family: inherit; cursor: none; background: none; border: none; color: inherit; }
-
-@media (max-width: 900px) { button { cursor: pointer; } }
+button { font-family: inherit; background: none; border: none; color: inherit; cursor: pointer; }
 
 ::selection { background: var(--terracotta); color: var(--limestone); }
 
@@ -69,27 +64,41 @@ button { font-family: inherit; cursor: none; background: none; border: none; col
   top: 0; left: 0;
   pointer-events: none;
   z-index: 9999;
-  transform: translate(-50%, -50%);
+  opacity: 0;
   will-change: transform;
+  transform: translate3d(-100px, -100px, 0);
 }
 .cursor-dot {
-  width: 5px; height: 5px;
+  width: 6px;
+  height: 6px;
   background: var(--deep-earth);
-  transition: transform 0.05s linear, background 0.2s var(--ease), width 0.2s var(--ease), height 0.2s var(--ease);
+  margin: -3px 0 0 -3px;
+  transition: opacity 0.18s linear, background 0.25s var(--ease), width 0.25s var(--ease), height 0.25s var(--ease), margin 0.25s var(--ease);
 }
 .cursor-ring {
-  width: 28px; height: 28px;
+  width: 32px;
+  height: 32px;
   border: var(--line) solid var(--deep-earth);
-  transition: width 0.25s var(--ease), height 0.25s var(--ease), border-color 0.25s var(--ease), opacity 0.2s var(--ease);
-  opacity: 0.6;
+  margin: -16px 0 0 -16px;
+  transition: opacity 0.18s linear, width 0.25s var(--ease), height 0.25s var(--ease), margin 0.25s var(--ease), border-color 0.25s var(--ease);
 }
-.cursor-hover .cursor-ring {
-  width: 54px; height: 54px;
+body.cursor-active .cursor-dot  { opacity: 1; }
+body.cursor-active .cursor-ring { opacity: 0.55; }
+
+body.cursor-hover .cursor-dot {
+  background: var(--terracotta);
+  width: 4px; height: 4px;
+  margin: -2px 0 0 -2px;
+}
+body.cursor-hover .cursor-ring {
+  width: 60px; height: 60px;
+  margin: -30px 0 0 -30px;
   border-color: var(--terracotta);
   opacity: 0.9;
 }
-.cursor-hover .cursor-dot {
-  background: var(--terracotta);
+
+@media (hover: none), (pointer: coarse), (max-width: 900px) {
+  .cursor-dot, .cursor-ring { display: none !important; }
 }
 
 /* ---------- Typography helpers ---------- */
@@ -330,12 +339,10 @@ em {
   margin-left: auto;
 }
 .hero-marker {
-  position: absolute;
-  top: 80px;
-  left: var(--gutter);
   display: flex;
   align-items: center;
   gap: 14px;
+  margin-bottom: 40px;
 }
 .hero-marker-line {
   width: 36px;
@@ -343,6 +350,7 @@ em {
   background: var(--dusty-clay);
 }
 .hero-marker-text {
+  font-family: 'DM Sans', sans-serif;
   font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 0.22em;
@@ -1170,7 +1178,7 @@ em {
     max-width: 100%;
     margin-left: 0;
   }
-  .hero-marker { top: 90px; left: 24px; }
+  .hero-marker { margin-bottom: 24px; }
   .hero-name { font-size: clamp(40px, 10vw, 56px); }
   .hero-right { order: 2; }
   .hero-image { height: 320px; }

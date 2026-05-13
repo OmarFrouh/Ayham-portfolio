@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice">
+  <rect width="900" height="600" fill="#1C0F0C"/>
+
+  <!-- Soft floor band -->
+  <rect x="0" y="460" width="900" height="140" fill="#5C2020"/>
+
+  <!-- Light cone (triangle of limestone) -->
+  <polygon points="450,80 320,460 580,460" fill="#F5F1EB" opacity="0.92"/>
+
+  <!-- Inner cooler band -->
+  <polygon points="450,140 360,460 540,460" fill="#E8DDD4"/>
+
+  <!-- Hot core line -->
+  <polygon points="450,180 415,460 485,460" fill="#C9A699"/>
+
+  <!-- Lens disc -->
+  <circle cx="450" cy="80" r="36" fill="#A0614A"/>
+  <circle cx="450" cy="80" r="26" fill="#1C0F0C"/>
+  <circle cx="450" cy="80" r="14" fill="#F5F1EB"/>
+
+  <!-- Concentric thin rings -->
+  <circle cx="450" cy="80" r="56" stroke="#A0614A" stroke-width="0.5" fill="none"/>
+  <circle cx="450" cy="80" r="76" stroke="#C9A699" stroke-width="0.5" fill="none" opacity="0.6"/>
+
+  <!-- Floor reference horizontal -->
+  <line x1="0" y1="460" x2="900" y2="460" stroke="#C9A699" stroke-width="0.5"/>
+
+  <!-- Tick marks on floor -->
+  <g stroke="#C9A699" stroke-width="0.5">
+    <line x1="80"  y1="460" x2="80"  y2="475"/>
+    <line x1="180" y1="460" x2="180" y2="475"/>
+    <line x1="280" y1="460" x2="280" y2="475"/>
+    <line x1="380" y1="460" x2="380" y2="475"/>
+    <line x1="480" y1="460" x2="480" y2="475"/>
+    <line x1="580" y1="460" x2="580" y2="475"/>
+    <line x1="680" y1="460" x2="680" y2="475"/>
+    <line x1="780" y1="460" x2="780" y2="475"/>
+  </g>
+
+  <!-- Plate -->
+  <text x="40"  y="560" font-family="DM Sans, sans-serif" font-size="9" letter-spacing="2" fill="#C9A699">LENS &amp; LIGHT · STUDY 02</text>
+  <text x="860" y="560" text-anchor="end" font-family="DM Sans, sans-serif" font-size="9" letter-spacing="2" fill="#C9A699">AUB · MMXXIV</text>
+</svg>
