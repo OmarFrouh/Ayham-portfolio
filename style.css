@@ -20,7 +20,11 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -30,7 +34,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(160, 97, 74, 0.15);
 }
+
+a, button { -webkit-tap-highlight-color: rgba(160, 97, 74, 0.15); }
 
 body.cursor-enabled,
 body.cursor-enabled * { cursor: none !important; }
@@ -869,6 +876,9 @@ em {
   transition: transform 0.4s var(--ease);
 }
 .project-card:hover .project-hover { transform: translateY(0); }
+@media (hover: none) {
+  .project-hover { transform: translateY(0); }
+}
 
 .project-body {
   padding: 20px 22px 26px;
@@ -1163,60 +1173,196 @@ em {
   padding-bottom: 4px;
 }
 
-/* ---------- Mobile ---------- */
+/* =========================================================
+   Responsive — tablet
+   ========================================================= */
 @media (max-width: 1024px) {
+  :root { --gutter: 48px; }
   .disciplines-head, .process-head { grid-template-columns: 1fr; gap: 32px; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .hero-left { padding: 80px 48px; }
 }
 
+/* =========================================================
+   Responsive — mobile (≤ 768px)
+   ========================================================= */
 @media (max-width: 768px) {
   :root { --gutter: 24px; }
 
+  /* iOS safe areas */
+  .nav-inner {
+    padding-left: max(24px, env(safe-area-inset-left));
+    padding-right: max(24px, env(safe-area-inset-right));
+  }
+  .mobile-menu { padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+
+  /* Larger touch targets */
+  .nav-burger {
+    width: 44px; height: 44px;
+    margin-right: -10px;
+  }
+  .nav-burger span:nth-child(1) { top: 18px; }
+  .nav-burger span:nth-child(2) { top: 24px; }
+
+  .mobile-close {
+    width: 44px; height: 44px;
+    top: 14px;
+    right: max(14px, env(safe-area-inset-right));
+  }
+  .mobile-menu a { padding: 10px 16px; }
+  .mobile-menu ul { gap: 18px; }
+
+  /* Hero */
   .hero { min-height: auto; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-left {
-    padding: 120px 24px 60px;
+    padding: 96px 24px 56px;
     max-width: 100%;
     margin-left: 0;
   }
-  .hero-marker { margin-bottom: 24px; }
+  .hero-marker { margin-bottom: 20px; }
+  .hero-eyebrow { margin-bottom: 22px; }
   .hero-name { font-size: clamp(40px, 10vw, 56px); }
+  .hero-descriptor { margin-bottom: 30px; }
+  .hero-cta-row { gap: 20px; margin-bottom: 56px; }
   .hero-right { order: 2; }
   .hero-image { height: 320px; }
-  .hero-image-caption { padding: 12px 18px; font-size: 8px; }
-  .hero-stats { gap: 18px; margin-top: 60px; }
-  .hero-bottom { padding: 16px 24px; }
+  .hero-image-caption { padding: 12px 18px; font-size: 8px; letter-spacing: 0.16em; }
 
-  .marquee-track { font-size: 22px; gap: 28px; }
+  .hero-stats {
+    gap: 16px;
+    margin-top: 56px;
+    flex-wrap: wrap;
+    row-gap: 18px;
+  }
+  .stat-divider { height: 24px; }
+  .stat-num { font-size: 24px; }
+  .hero-bottom {
+    padding: 14px 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 
+  /* Marquee */
+  .marquee { padding: 16px 0; }
+  .marquee-track { font-size: 20px; gap: 24px; }
+
+  /* Section padding */
   .positioning, .disciplines, .projects, .process, .cta {
-    padding-left: 24px; padding-right: 24px;
-    padding-top: 80px; padding-bottom: 80px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
   .positioning-mark { font-size: 60px; }
+  .positioning-line { font-size: clamp(26px, 6.5vw, 38px); }
+  .positioning-eyebrow { margin-bottom: 24px; }
 
-  .disciplines-grid { grid-template-columns: 1fr; }
+  /* Disciplines */
+  .disciplines-grid { grid-template-columns: 1fr; gap: 24px; }
   .disciplines-left { padding-right: 0; order: 2; }
   .disciplines-right { order: 1; }
-  .disciplines-image { min-height: 280px; height: 280px; }
+  .disciplines-image { min-height: 260px; height: 260px; }
+  .discipline { grid-template-columns: 32px 1fr 24px; gap: 14px; padding: 22px 0; }
+  .discipline-active { padding: 22px 16px; }
+  .discipline-name { font-size: clamp(17px, 4vw, 20px); }
+  .discipline-desc { font-size: 11px; }
 
+  /* Projects */
+  .projects-meta { margin-bottom: 24px; }
   .projects-grid { grid-template-columns: 1fr; }
+  .project-body { padding: 18px 18px 22px; }
+  .project-title { font-size: 18px; }
+  .project-meta { gap: 12px; font-size: 9px; padding-top: 12px; }
+  .project-hover { padding: 12px 18px; }
+  .project-index { top: 14px; left: 14px; font-size: 8px; padding: 5px 8px; }
+
+  /* Process */
   .process-grid { grid-template-columns: 1fr 1fr; }
+  .process-step { padding: 28px 22px 32px; }
+  .process-step-num { font-size: 28px; margin-bottom: 24px; }
+  .process-step-title { font-size: 19px; margin-bottom: 12px; }
 
-  .cta { padding: 80px 24px; }
+  /* CTA */
+  .cta { padding: 72px 24px; }
+  .cta::before { height: 36px; }
+  .cta-heading { margin-bottom: 28px; }
+  .cta-mail { margin-top: 28px; }
+  .cta-mail a { margin-left: 0; margin-top: 8px; display: block; }
 
+  /* Buttons */
+  .btn { padding: 14px 26px; }
+  .btn-ghost { padding: 14px 30px; }
+
+  /* Footer */
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
-    padding: 48px 24px;
+    gap: 22px;
+    padding: 44px 24px max(44px, env(safe-area-inset-bottom));
   }
   .footer-right { text-align: left; }
+  .footer-band { padding: 12px 0; font-size: 9px; letter-spacing: 0.28em; gap: 18px; }
+
+  /* Coming soon pages */
+  .coming-soon { padding: 96px 24px; min-height: calc(100vh - 64px); }
+
+  /* Smaller reveal travel so it doesn't feel jumpy */
+  .reveal { transform: translateY(16px); }
 }
 
+/* =========================================================
+   Responsive — small phones (≤ 480px)
+   ========================================================= */
 @media (max-width: 480px) {
+  .hero-left { padding: 92px 20px 48px; }
+  .hero-image { height: 260px; }
+  .hero-stats { gap: 14px; row-gap: 16px; }
+  .stat-num { font-size: 22px; }
+  .stat-label { font-size: 8px; }
+
+  .positioning, .disciplines, .projects, .process, .cta {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .positioning-mark { font-size: 48px; }
+  .positioning-line { font-size: clamp(24px, 7vw, 32px); }
+
+  .disciplines-image { min-height: 220px; height: 220px; }
+  .discipline-text { padding-right: 0; }
+  .disciplines-caption { font-size: 8px; letter-spacing: 0.12em; }
+
   .process-grid { grid-template-columns: 1fr; }
+
+  .cta { padding: 64px 20px; }
+  .cta-heading { font-size: clamp(24px, 6vw, 32px); }
+
+  .footer-inner { padding: 36px 20px max(36px, env(safe-area-inset-bottom)); gap: 18px; }
+  .footer-band { font-size: 8px; gap: 14px; padding: 10px 0; }
+
+  .marquee-track { font-size: 18px; gap: 20px; }
+
+  .coming-soon { padding: 80px 20px; }
+  .coming-soon h1 { font-size: clamp(40px, 12vw, 64px); }
+
+  /* Hide the grain on small screens to ease GPU work */
+  .grain { opacity: 0.03; }
 }
 
+/* =========================================================
+   Landscape phones — keep hero compact
+   ========================================================= */
+@media (max-width: 920px) and (orientation: landscape) and (max-height: 500px) {
+  .hero-left { padding: 80px 24px 32px; }
+  .hero-image { height: 240px; }
+  .hero-stats { margin-top: 32px; }
+}
+
+/* =========================================================
+   Reduced motion
+   ========================================================= */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -1224,4 +1370,5 @@ em {
     transition-duration: 0.01ms !important;
   }
   .marquee-track, .footer-band { animation: none; }
+  html { scroll-behavior: auto; }
 }
