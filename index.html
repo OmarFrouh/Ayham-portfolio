@@ -7,10 +7,10 @@
 <meta name="theme-color" content="#1C0F0C" media="(prefers-color-scheme: dark)" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-<meta name="apple-mobile-web-app-title" content="Ayham Aldarwesh" />
+<meta name="apple-mobile-web-app-title" content="Ayham Rami Aldarwesh" />
 <meta name="format-detection" content="telephone=no" />
-<title>Ayham Aldarwesh — Interior Architecture & Design</title>
-<meta name="description" content="Interior architecture for those who know the difference. Work by Ayham Aldarwesh, based in Abingdon, Oxfordshire." />
+<title>Ayham Rami Aldarwesh — Interior Architecture &amp; Design</title>
+<meta name="description" content="Interior architecture and design studio. We create meaningful, timeless environments that reflect the essence of each client and space." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
@@ -18,341 +18,342 @@
 </head>
 <body>
 
-<!-- Film grain overlay -->
 <div class="grain" aria-hidden="true"></div>
-
-<!-- Custom cursor -->
 <div class="cursor-dot" aria-hidden="true"></div>
 <div class="cursor-ring" aria-hidden="true"></div>
 
-<!-- Navigation -->
+<!-- =============== NAVIGATION =============== -->
 <nav class="nav" aria-label="Primary">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">ARD</a>
+    <a href="index.html" class="nav-logo" aria-label="Ayham Rami Aldarwesh — Home">
+      <span class="nav-logo-mark" aria-hidden="true">
+        <img src="assets/logo.svg" alt="" />
+      </span>
+      <span class="nav-logo-name">
+        Ayham Rami<br/>Aldarwesh
+      </span>
+    </a>
+
     <ul class="nav-links" role="list">
-      <li><a href="work.html">Work</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" class="nav-link nav-link-active">Home</a></li>
+      <li><a href="work.html" class="nav-link">Projects</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
+
+    <div class="nav-end">
+      <span class="nav-lang" aria-hidden="true">EN</span>
+    </div>
+
     <button class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- Mobile menu overlay -->
+<!-- =============== MOBILE MENU =============== -->
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-  <button class="mobile-close" aria-label="Close menu">
-    <span></span><span></span>
-  </button>
+  <button class="mobile-close" aria-label="Close menu"><span></span><span></span></button>
   <ul role="list">
-    <li><a href="work.html">Work</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="work.html">Projects</a></li>
     <li><a href="about.html">About</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="mobile-foot">Abingdon, Oxfordshire</div>
+  <div class="mobile-foot">
+    <span>Abingdon, Oxfordshire</span>
+    <a href="mailto:ayhamdesignss@gmail.com">ayhamdesignss@gmail.com</a>
+  </div>
 </div>
 
 <main>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-grid">
-    <div class="hero-left">
-      <div class="hero-marker" aria-hidden="true">
-        <span class="hero-marker-line"></span>
-        <span class="hero-marker-text">01 — Index</span>
-      </div>
+<!-- =============== HERO =============== -->
+<section class="hero" id="hero">
+  <div class="hero-stage">
 
-      <p class="eyebrow hero-eyebrow reveal-stagger">Interior Architecture &amp; Design</p>
+    <!-- Title sits BEHIND the image -->
+    <h1 class="hero-title">
+      <span class="hero-line hero-line-1">
+        <span class="hero-word">Crafting</span>
+      </span>
+      <span class="hero-line hero-line-2">
+        <span class="hero-word">Timeless</span>
+      </span>
+      <span class="hero-line hero-line-3">
+        <span class="hero-word">Spaces</span>
+      </span>
+    </h1>
 
-      <h1 class="hero-name">
-        <span class="hero-name-1 reveal-stagger">
-          <span class="char-wrap">
-            <span class="char">A</span><span class="char">y</span><span class="char">h</span><span class="char">a</span><span class="char">m</span>
-          </span>
-        </span>
-        <span class="hero-name-2 reveal-stagger">
-          <span class="char-wrap">
-            <span class="char">A</span><span class="char">l</span><span class="char">d</span><span class="char">a</span><span class="char">r</span><span class="char">w</span><span class="char">e</span><span class="char">s</span><span class="char">h</span>
-          </span>
-        </span>
-      </h1>
-
-      <hr class="hero-rule reveal-stagger" />
-
-      <p class="hero-descriptor reveal-stagger">Interior architecture for those who know the difference.</p>
-
-      <div class="hero-cta-row reveal-stagger">
-        <a href="work.html" class="btn btn-primary">View Work</a>
-        <a href="contact.html" class="hero-secondary">Commission a space →</a>
-      </div>
-
-      <div class="hero-stats reveal-stagger" aria-label="Practice at a glance">
-        <div class="stat">
-          <div class="stat-num" data-count="6">0</div>
-          <div class="stat-label">Projects</div>
-        </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat">
-          <div class="stat-num" data-count="3">0</div>
-          <div class="stat-label">Disciplines</div>
-        </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat">
-          <div class="stat-num" data-count="1">0</div>
-          <div class="stat-label">Voice</div>
-        </div>
-      </div>
+    <!-- Image sits IN FRONT, building extends above frame -->
+    <div class="hero-figure" aria-hidden="true">
+      <!-- Replace SVG with: hero-main-architecture.jpg (use object-fit cover & 1600+px wide) -->
+      <img src="assets/hero-architecture.svg" alt="" />
     </div>
 
-    <div class="hero-right">
-      <div class="hero-image">
-        <!-- Replace image with: hero.jpg -->
-        <img src="assets/hero.svg" alt="Interior architecture by Ayham Aldarwesh" />
-        <div class="hero-image-caption">
-          <span>Selected · Spatial Study</span>
-          <span class="hero-image-year">MMXXIV</span>
-        </div>
-      </div>
+    <!-- Eyebrow + supporting line -->
+    <div class="hero-meta">
+      <span class="hero-rule" aria-hidden="true"></span>
+      <p class="hero-tag">
+        Interior Architecture<br/>&amp; Design Studio
+      </p>
     </div>
-  </div>
 
-  <div class="hero-bottom">
-    <div class="hero-scroll" aria-hidden="true">
+    <!-- Bottom corners: scroll + time -->
+    <div class="hero-corner hero-corner-left" aria-hidden="true">
+      <span class="hero-corner-line"></span>
+      <span>Abingdon — <span id="local-time">—</span></span>
+    </div>
+    <div class="hero-corner hero-corner-right" aria-hidden="true">
       <span>Scroll</span>
-      <span class="hero-scroll-line"></span>
+      <span class="hero-corner-arrow">↓</span>
     </div>
-    <div class="hero-clock" aria-hidden="true">
-      <span class="hero-clock-dot"></span>
-      <span id="local-time">—</span>
-      <span>Abingdon</span>
-    </div>
-  </div>
-</section>
-
-<!-- Marquee band -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Residential</span><span class="marquee-dot">◦</span>
-    <span>Hospitality</span><span class="marquee-dot">◦</span>
-    <span>Therapeutic</span><span class="marquee-dot">◦</span>
-    <span>Research</span><span class="marquee-dot">◦</span>
-    <span>Considered Spaces</span><span class="marquee-dot">◦</span>
-    <span>Residential</span><span class="marquee-dot">◦</span>
-    <span>Hospitality</span><span class="marquee-dot">◦</span>
-    <span>Therapeutic</span><span class="marquee-dot">◦</span>
-    <span>Research</span><span class="marquee-dot">◦</span>
-    <span>Considered Spaces</span><span class="marquee-dot">◦</span>
-  </div>
-</div>
-
-<!-- Positioning statement -->
-<section class="positioning">
-  <div class="positioning-inner">
-    <p class="eyebrow positioning-eyebrow reveal">Statement of Practice</p>
-    <h2 class="positioning-line reveal">Interior architecture for those who know the difference.</h2>
-    <p class="positioning-body reveal">Space, considered. Every commission begins with listening — and ends with a space that feels inevitable.</p>
-    <div class="positioning-mark reveal" aria-hidden="true">A · A</div>
-  </div>
-</section>
-
-<!-- Disciplines -->
-<section class="disciplines">
-  <div class="disciplines-head">
-    <p class="eyebrow reveal">What I do</p>
-    <h2 class="disciplines-title reveal">Four <em>disciplines</em>,<br />one sensibility.</h2>
-  </div>
-
-  <div class="disciplines-grid">
-    <div class="disciplines-left">
-      <div class="discipline reveal">
-        <div class="discipline-num">01</div>
-        <div class="discipline-text">
-          <h3 class="discipline-name">Residential</h3>
-          <p class="discipline-desc">Private homes and apartments, from concept through to completion.</p>
-        </div>
-        <span class="discipline-arrow" aria-hidden="true">↗</span>
-      </div>
-
-      <div class="discipline discipline-active reveal">
-        <div class="discipline-num">02</div>
-        <div class="discipline-text">
-          <h3 class="discipline-name">Hospitality</h3>
-          <p class="discipline-desc">Hotels, restaurants, and experiential spaces for discerning clients.</p>
-        </div>
-        <span class="discipline-arrow" aria-hidden="true">↗</span>
-      </div>
-
-      <div class="discipline reveal">
-        <div class="discipline-num">03</div>
-        <div class="discipline-text">
-          <h3 class="discipline-name">Therapeutic</h3>
-          <p class="discipline-desc">Spaces designed around psychological wellbeing and recovery.</p>
-        </div>
-        <span class="discipline-arrow" aria-hidden="true">↗</span>
-      </div>
-
-      <div class="discipline reveal">
-        <div class="discipline-num">04</div>
-        <div class="discipline-text">
-          <h3 class="discipline-name">Research</h3>
-          <p class="discipline-desc">Evidence-led spatial analysis and academic design enquiry.</p>
-        </div>
-        <span class="discipline-arrow" aria-hidden="true">↗</span>
-      </div>
-    </div>
-
-    <div class="disciplines-right reveal">
-      <div class="disciplines-image">
-        <!-- Replace image with: disciplines.jpg -->
-        <img src="assets/disciplines.svg" alt="Spatial study — academic project" />
-      </div>
-      <div class="disciplines-caption">
-        Academic project — Arts University Bournemouth
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Selected projects -->
-<section class="projects">
-  <div class="projects-meta">
-    <p class="eyebrow reveal">Selected Work</p>
-    <a href="work.html" class="projects-link reveal">View all work →</a>
-  </div>
-
-  <h2 class="projects-title reveal">Projects</h2>
-  <hr class="projects-divider reveal" />
-
-  <div class="projects-grid">
-
-    <a href="work/drift.html" class="project-card reveal">
-      <div class="project-img-wrap">
-        <!-- Replace image with: drift-hero.jpg -->
-        <img src="assets/drift.svg" alt="Drift — Spatial design project" class="project-img" />
-        <div class="project-index">N° 01</div>
-        <div class="project-hover">View project →</div>
-      </div>
-      <div class="project-body">
-        <p class="eyebrow project-eyebrow">Spatial Design · AUB · 2024</p>
-        <h3 class="project-title">Drift</h3>
-        <div class="project-meta">
-          <span>Concept</span>
-          <span>Material</span>
-          <span>Light</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="work/lens-light.html" class="project-card reveal">
-      <div class="project-img-wrap">
-        <!-- Replace image with: lens-light-hero.jpg -->
-        <img src="assets/lens-light.svg" alt="Lens & Light — Installation project" class="project-img" />
-        <div class="project-index">N° 02</div>
-        <div class="project-hover">View project →</div>
-      </div>
-      <div class="project-body">
-        <p class="eyebrow project-eyebrow">Installation · AUB · 2024</p>
-        <h3 class="project-title">Lens &amp; Light</h3>
-        <div class="project-meta">
-          <span>Installation</span>
-          <span>Spatial</span>
-          <span>Optics</span>
-        </div>
-      </div>
-    </a>
 
   </div>
 </section>
 
-<!-- Process section -->
-<section class="process">
-  <div class="process-head">
-    <p class="eyebrow reveal">Method</p>
-    <h2 class="process-title reveal">A practice of <em>listening</em><br />before drawing.</h2>
-  </div>
+<!-- =============== INTRODUCTION =============== -->
+<section class="intro">
+  <div class="intro-inner">
+    <div class="intro-eyebrow-row reveal">
+      <p class="eyebrow">Welcome</p>
+    </div>
 
-  <div class="process-grid">
-    <div class="process-step reveal">
-      <div class="process-step-num">i</div>
-      <h3 class="process-step-title">Listen</h3>
-      <p class="process-step-body">Long conversations. Site visits without a sketchbook. Understanding the room behind the room.</p>
+    <div class="intro-grid">
+      <div class="intro-statement reveal">
+        <h2>
+          We create meaningful, timeless environments that reflect the essence of each client and space.
+        </h2>
+      </div>
+
+      <div class="intro-body reveal">
+        <p>
+          Ayham Rami Aldarwesh is an interior architecture and design studio rooted in a deep understanding of proportion, materiality, and human experience.
+        </p>
+        <p>
+          Every commission begins with listening. We design with intention and craft spaces that elevate everyday living — environments that feel inevitable, not assembled.
+        </p>
+        <a href="about.html" class="intro-link">
+          More about the studio <span class="arrow">→</span>
+        </a>
+      </div>
     </div>
-    <div class="process-step reveal">
-      <div class="process-step-num">ii</div>
-      <h3 class="process-step-title">Frame</h3>
-      <p class="process-step-body">Establishing the brief as a question of feeling, not just function. The mood, the weight, the air.</p>
-    </div>
-    <div class="process-step reveal">
-      <div class="process-step-num">iii</div>
-      <h3 class="process-step-title">Draw</h3>
-      <p class="process-step-body">Plans, sections, prototypes. The slow conversation between hand, page, and material sample.</p>
-    </div>
-    <div class="process-step reveal">
-      <div class="process-step-num">iv</div>
-      <h3 class="process-step-title">Build</h3>
-      <p class="process-step-body">On site with the trades. Adjusting, refining. The last 5% is where the work earns its keep.</p>
-    </div>
+
+    <hr class="intro-rule reveal" />
   </div>
 </section>
 
-<!-- CTA strip -->
-<section class="cta">
-  <div class="cta-inner">
-    <p class="eyebrow cta-eyebrow reveal">
-      <span class="cta-pulse" aria-hidden="true"></span>
-      Currently available for commissions
+<!-- =============== FEATURED PROJECTS =============== -->
+<section class="featured" id="projects">
+  <div class="featured-head">
+    <p class="eyebrow reveal">
+      <span class="eyebrow-line" aria-hidden="true"></span>
+      Featured Projects
     </p>
-    <h2 class="cta-heading reveal">Let&rsquo;s make something <em>worth keeping.</em></h2>
-    <a href="contact.html" class="btn btn-ghost reveal">Get in touch</a>
-    <div class="cta-mail reveal">
-      <span>or write directly</span>
-      <a href="mailto:ayhamdesignss@gmail.com">ayhamdesignss@gmail.com</a>
-    </div>
+    <a href="work.html" class="featured-view reveal">View all projects <span class="arrow">→</span></a>
+  </div>
+
+  <ol class="featured-grid" role="list">
+    <li class="featured-card reveal">
+      <a href="work.html">
+        <div class="featured-img-wrap">
+          <!-- Replace image with: villa-m.jpg -->
+          <img src="assets/projects/villa-m.svg" alt="Villa M — Dubai, UAE" />
+          <span class="featured-num">N° 01</span>
+        </div>
+        <div class="featured-meta">
+          <h3 class="featured-title">Villa M</h3>
+          <p class="featured-loc">Dubai, UAE</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="featured-card reveal">
+      <a href="work.html">
+        <div class="featured-img-wrap">
+          <!-- Replace image with: desert-house.jpg -->
+          <img src="assets/projects/desert-house.svg" alt="Desert House — AlUla, KSA" />
+          <span class="featured-num">N° 02</span>
+        </div>
+        <div class="featured-meta">
+          <h3 class="featured-title">Desert House</h3>
+          <p class="featured-loc">AlUla, KSA</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="featured-card reveal">
+      <a href="work.html">
+        <div class="featured-img-wrap">
+          <!-- Replace image with: jumeirah-residence.jpg -->
+          <img src="assets/projects/jumeirah.svg" alt="Jumeirah Residence — Dubai, UAE" />
+          <span class="featured-num">N° 03</span>
+        </div>
+        <div class="featured-meta">
+          <h3 class="featured-title">Jumeirah Residence</h3>
+          <p class="featured-loc">Dubai, UAE</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="featured-card reveal">
+      <a href="work.html">
+        <div class="featured-img-wrap">
+          <!-- Replace image with: cliff-house.jpg -->
+          <img src="assets/projects/cliff-house.svg" alt="Cliff House — Ras Al Khaimah, UAE" />
+          <span class="featured-num">N° 04</span>
+        </div>
+        <div class="featured-meta">
+          <h3 class="featured-title">Cliff House</h3>
+          <p class="featured-loc">Ras Al Khaimah, UAE</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="featured-card reveal">
+      <a href="work.html">
+        <div class="featured-img-wrap">
+          <!-- Replace image with: private-penthouse.jpg -->
+          <img src="assets/projects/penthouse.svg" alt="Private Penthouse — Dubai, UAE" />
+          <span class="featured-num">N° 05</span>
+        </div>
+        <div class="featured-meta">
+          <h3 class="featured-title">Private Penthouse</h3>
+          <p class="featured-loc">Dubai, UAE</p>
+        </div>
+      </a>
+    </li>
+  </ol>
+</section>
+
+<!-- =============== SERVICES =============== -->
+<section class="services" id="services">
+  <div class="services-head">
+    <p class="eyebrow reveal">
+      <span class="eyebrow-line" aria-hidden="true"></span>
+      Services
+    </p>
+    <h2 class="services-title reveal">
+      A practice across <em>seven disciplines.</em>
+    </h2>
+  </div>
+
+  <ul class="services-grid" role="list">
+    <li class="service reveal">
+      <span class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 14 26 Q 14 18 24 18 Q 34 18 34 26 L 34 36 L 14 36 Z"/>
+          <line x1="14" y1="30" x2="34" y2="30"/>
+          <line x1="17" y1="36" x2="17" y2="42"/>
+          <line x1="31" y1="36" x2="31" y2="42"/>
+        </svg>
+      </span>
+      <h3 class="service-name">Interior Design</h3>
+    </li>
+
+    <li class="service reveal">
+      <span class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 12 38 L 12 24 Q 12 12 24 12 Q 36 12 36 24 L 36 38"/>
+          <line x1="8" y1="38" x2="40" y2="38"/>
+        </svg>
+      </span>
+      <h3 class="service-name">Interior Architecture</h3>
+    </li>
+
+    <li class="service reveal">
+      <span class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="10" y="10" width="28" height="28"/>
+          <line x1="24" y1="10" x2="24" y2="38"/>
+          <line x1="10" y1="24" x2="38" y2="24"/>
+        </svg>
+      </span>
+      <h3 class="service-name">Space Planning</h3>
+    </li>
+
+    <li class="service reveal">
+      <span class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 10 32 L 10 26 Q 10 22 14 22 L 34 22 Q 38 22 38 26 L 38 32"/>
+          <path d="M 8 38 L 8 32 L 40 32 L 40 38"/>
+          <line x1="14" y1="22" x2="14" y2="18"/>
+          <line x1="34" y1="22" x2="34" y2="18"/>
+        </svg>
+      </span>
+      <h3 class="service-name">Furniture &amp; Material Selection</h3>
+    </li>
+
+    <li class="service reveal">
+      <span class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 8 24 L 24 10 L 40 24 L 40 40 L 8 40 Z"/>
+          <path d="M 20 40 L 20 28 L 28 28 L 28 40"/>
+        </svg>
+      </span>
+      <h3 class="service-name">Residential Design</h3>
+    </li>
+
+    <li class="service reveal">
+      <span class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="12" y="8" width="24" height="32"/>
+          <rect x="16" y="13" width="4" height="4"/>
+          <rect x="22" y="13" width="4" height="4"/>
+          <rect x="28" y="13" width="4" height="4"/>
+          <rect x="16" y="21" width="4" height="4"/>
+          <rect x="22" y="21" width="4" height="4"/>
+          <rect x="28" y="21" width="4" height="4"/>
+          <rect x="22" y="30" width="4" height="10"/>
+        </svg>
+      </span>
+      <h3 class="service-name">Commercial Design</h3>
+    </li>
+
+    <li class="service reveal">
+      <span class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 24 8 L 40 16 L 40 32 L 24 40 L 8 32 L 8 16 Z"/>
+          <line x1="24" y1="8"  x2="24" y2="24"/>
+          <line x1="24" y1="24" x2="40" y2="16"/>
+          <line x1="24" y1="24" x2="8"  y2="16"/>
+        </svg>
+      </span>
+      <h3 class="service-name">3D Visualisation</h3>
+    </li>
+  </ul>
+
+  <div class="services-foot reveal">
+    <a href="contact.html" class="btn btn-ghost">Discuss a commission</a>
   </div>
 </section>
 
 </main>
 
-<!-- Footer -->
+<!-- =============== FOOTER =============== -->
 <footer class="footer">
   <div class="footer-inner">
-    <div class="footer-left">
-      <div class="footer-name">Ayham Aldarwesh</div>
-      <div class="footer-tag">Interior Architecture &amp; Design</div>
-      <div class="footer-socials">
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Behance</a>
+    <div class="footer-brand">
+      <span class="footer-mark" aria-hidden="true">
+        <img src="assets/logo.svg" alt="" />
+      </span>
+      <div>
+        <div class="footer-name">Ayham Rami Aldarwesh</div>
+        <div class="footer-tag">Interior Architecture &amp; Design</div>
       </div>
     </div>
-    <div class="footer-right">
-      <div>Abingdon, Oxfordshire</div>
-      <div><a href="mailto:ayhamdesignss@gmail.com">ayhamdesignss@gmail.com</a></div>
-      <div class="footer-copy">&copy; 2026 Ayham Aldarwesh</div>
+
+    <div class="footer-center">
+      &copy; 2026 Ayham Rami Aldarwesh. All rights reserved.
     </div>
-  </div>
-  <div class="footer-band" aria-hidden="true">
-    <span>AYHAM</span>
-    <span>·</span>
-    <span>ALDARWESH</span>
-    <span>·</span>
-    <span>MMXXVI</span>
-    <span>·</span>
-    <span>OXFORDSHIRE</span>
-    <span>·</span>
-    <span>INTERIOR ARCHITECTURE</span>
-    <span>·</span>
-    <span>AYHAM</span>
-    <span>·</span>
-    <span>ALDARWESH</span>
-    <span>·</span>
-    <span>MMXXVI</span>
-    <span>·</span>
-    <span>OXFORDSHIRE</span>
-    <span>·</span>
-    <span>INTERIOR ARCHITECTURE</span>
+
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="mailto:ayhamdesignss@gmail.com">Email</a>
+    </div>
   </div>
 </footer>
 

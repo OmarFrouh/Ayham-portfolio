@@ -23,12 +23,27 @@
 
 <nav class="nav" aria-label="Primary">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">ARD</a>
+    <a href="index.html" class="nav-logo" aria-label="Ayham Rami Aldarwesh — Home">
+      <span class="nav-logo-mark" aria-hidden="true">
+        <img src="assets/logo.svg" alt="" />
+      </span>
+      <span class="nav-logo-name">
+        Ayham Rami<br/>Aldarwesh
+      </span>
+    </a>
+
     <ul class="nav-links" role="list">
-      <li><a href="work.html">Work</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="work.html" class="nav-link">Projects</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="index.html#services" class="nav-link">Services</a></li>
+      <li><a href="contact.html" class="nav-link nav-link-active">Contact</a></li>
     </ul>
+
+    <div class="nav-end">
+      <span class="nav-lang" aria-hidden="true">EN</span>
+    </div>
+
     <button class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span>
     </button>
@@ -38,11 +53,16 @@
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <button class="mobile-close" aria-label="Close menu"><span></span><span></span></button>
   <ul role="list">
-    <li><a href="work.html">Work</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="work.html">Projects</a></li>
     <li><a href="about.html">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="mobile-foot">Abingdon, Oxfordshire</div>
+  <div class="mobile-foot">
+    <span>Abingdon, Oxfordshire</span>
+    <a href="mailto:ayhamdesignss@gmail.com">ayhamdesignss@gmail.com</a>
+  </div>
 </div>
 
 <main class="coming-soon">
@@ -55,26 +75,23 @@
 
 <footer class="footer">
   <div class="footer-inner">
-    <div class="footer-left">
-      <div class="footer-name">Ayham Aldarwesh</div>
-      <div class="footer-tag">Interior Architecture &amp; Design</div>
-      <div class="footer-socials">
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Behance</a>
+    <div class="footer-brand">
+      <span class="footer-mark" aria-hidden="true">
+        <img src="assets/logo.svg" alt="" />
+      </span>
+      <div>
+        <div class="footer-name">Ayham Rami Aldarwesh</div>
+        <div class="footer-tag">Interior Architecture &amp; Design</div>
       </div>
     </div>
-    <div class="footer-right">
-      <div>Abingdon, Oxfordshire</div>
-      <div><a href="mailto:ayhamdesignss@gmail.com">ayhamdesignss@gmail.com</a></div>
-      <div class="footer-copy">&copy; 2026 Ayham Aldarwesh</div>
+    <div class="footer-center">
+      &copy; 2026 Ayham Rami Aldarwesh. All rights reserved.
     </div>
-  </div>
-  <div class="footer-band" aria-hidden="true">
-    <span>AYHAM</span><span>·</span><span>ALDARWESH</span><span>·</span><span>MMXXVI</span><span>·</span>
-    <span>OXFORDSHIRE</span><span>·</span><span>INTERIOR ARCHITECTURE</span><span>·</span>
-    <span>AYHAM</span><span>·</span><span>ALDARWESH</span><span>·</span><span>MMXXVI</span><span>·</span>
-    <span>OXFORDSHIRE</span><span>·</span><span>INTERIOR ARCHITECTURE</span>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="mailto:ayhamdesignss@gmail.com">Email</a>
+    </div>
   </div>
 </footer>
 

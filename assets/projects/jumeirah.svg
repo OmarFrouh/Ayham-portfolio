@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice">
+  <!-- Clean modern kitchen with horizontal lines -->
+  <rect width="600" height="450" fill="#E8DDD4"/>
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="600" height="40" fill="#1C0F0C" opacity="0.7"/>
+  <!-- Pendant lights -->
+  <g fill="#1C0F0C">
+    <line x1="180" y1="40"  x2="180" y2="170" stroke="#1C0F0C" stroke-width="0.5"/>
+    <line x1="300" y1="40"  x2="300" y2="170" stroke="#1C0F0C" stroke-width="0.5"/>
+    <line x1="420" y1="40"  x2="420" y2="170" stroke="#1C0F0C" stroke-width="0.5"/>
+    <rect x="174" y="165" width="12" height="14"/>
+    <rect x="294" y="165" width="12" height="14"/>
+    <rect x="414" y="165" width="12" height="14"/>
+  </g>
+  <!-- Warm glow under pendants -->
+  <g fill="#A0614A" opacity="0.7">
+    <rect x="170" y="178" width="20" height="3"/>
+    <rect x="290" y="178" width="20" height="3"/>
+    <rect x="410" y="178" width="20" height="3"/>
+  </g>
+  <!-- Long counter/island -->
+  <rect x="80" y="290" width="440" height="80" fill="#1C0F0C"/>
+  <rect x="80" y="286" width="440" height="6" fill="#C9A699"/>
+  <!-- Backsplash -->
+  <rect x="60" y="200" width="480" height="50" fill="#C9A699"/>
+  <line x1="60" y1="200" x2="540" y2="200" stroke="#1C0F0C" stroke-width="0.5"/>
+  <line x1="60" y1="250" x2="540" y2="250" stroke="#1C0F0C" stroke-width="0.5"/>
+  <!-- Three stools -->
+  <g fill="#5C2020">
+    <rect x="140" y="370" width="40" height="50"/>
+    <rect x="280" y="370" width="40" height="50"/>
+    <rect x="420" y="370" width="40" height="50"/>
+  </g>
+  <!-- Floor -->
+  <rect x="0" y="370" width="600" height="80" fill="#C9A699"/>
+  <line x1="0" y1="370" x2="600" y2="370" stroke="#1C0F0C" stroke-width="0.5"/>
+</svg>
