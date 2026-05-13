@@ -436,28 +436,29 @@ body.cursor-hover .cursor-ring {
 .hero-loaded .hero-line-2 .hero-word { transform: translateY(0); opacity: 1; transition-delay: 0.3s; }
 .hero-loaded .hero-line-3 .hero-word { transform: translateY(0); opacity: 1; transition-delay: 0.45s; }
 
-/* Image — IN FRONT, building extends above the frame */
+/* Image — IN FRONT, building extends above the frame.
+   PNG has a transparent sky so the silhouette floats over the
+   limestone background. object-fit: contain keeps the proportions
+   and lets the transparent top area breathe past the title. */
 .hero-figure {
   position: absolute;
-  top: -60px;            /* visual frame starts here */
-  right: -40px;          /* breathes past right edge */
-  width: 62%;
+  top: -30px;             /* lifts the building above the title's top */
+  right: -3%;             /* slight right bleed past content */
+  width: 74%;
   height: calc(100% + 30px);
-  z-index: 2;            /* above the title */
-  overflow: visible;
+  z-index: 2;             /* above the title */
   pointer-events: none;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.4s var(--ease-soft) 0.4s, transform 1.4s var(--ease-soft) 0.4s;
+  transform: translateY(24px);
+  transition: opacity 1.6s var(--ease-soft) 0.45s, transform 1.6s var(--ease-soft) 0.45s;
 }
 .hero-loaded .hero-figure { opacity: 1; transform: translateY(0); }
-.hero-figure img,
-.hero-figure svg {
+.hero-figure img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: bottom right;
-  overflow: visible;
+  object-position: right bottom;
+  display: block;
 }
 
 /* Eyebrow under the title — small rule + supporting line */
@@ -989,12 +990,13 @@ body.cursor-hover .cursor-ring {
   .hero-figure {
     position: absolute;
     top: auto;
-    bottom: 60px;
+    bottom: 50px;
     right: -16px;
-    width: 78%;
-    height: 56%;
+    width: 90%;
+    height: 62%;
     z-index: 2;
   }
+  .hero-figure img { object-position: right bottom; }
   .hero-meta {
     position: relative;
     z-index: 3;
@@ -1054,7 +1056,7 @@ body.cursor-hover .cursor-ring {
    ========================================================= */
 @media (max-width: 480px) {
   .hero-title { font-size: clamp(48px, 16vw, 72px); }
-  .hero-figure { width: 86%; right: -12px; bottom: 40px; height: 50%; }
+  .hero-figure { width: 100%; right: -12px; bottom: 30px; height: 56%; }
   .hero-meta { margin-bottom: 28px; }
 
   .intro-statement h2 { font-size: clamp(22px, 6vw, 28px); }
