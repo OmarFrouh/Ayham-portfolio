@@ -404,8 +404,6 @@ body.cursor-hover .cursor-ring {
   margin: 0 auto;
 }
 
-.hero-eyebrow { margin-bottom: 32px; }
-
 .hero-title {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
@@ -448,11 +446,12 @@ body.cursor-hover .cursor-ring {
 }
 .hero-tag {
   font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 1.85;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  line-height: 1.7;
   color: var(--deep-earth);
-  opacity: 0.78;
 }
 
 /* The photograph sits as its own full-width band directly under the hero text */
@@ -928,7 +927,6 @@ body.cursor-hover .cursor-ring {
 
   /* HERO — simple stack on mobile */
   .hero { padding: calc(var(--nav-h) + 56px) 24px 56px; }
-  .hero-eyebrow { margin-bottom: 24px; }
   .hero-title {
     font-size: clamp(48px, 13vw, 84px);
     margin-bottom: 32px;
@@ -936,7 +934,7 @@ body.cursor-hover .cursor-ring {
   }
   .hero-meta { gap: 18px; }
   .hero-rule { width: 36px; }
-  .hero-tag { font-size: 12px; }
+  .hero-tag { font-size: 10px; }
   .hero-photo { padding: 0 24px; }
   .hero-photo img { height: clamp(320px, 50vh, 480px); }
 
