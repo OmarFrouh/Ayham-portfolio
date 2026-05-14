@@ -391,87 +391,51 @@ body.cursor-hover .cursor-ring {
 }
 
 /* =========================================================
-   HERO  — layered composition
+   HERO — simple stacked composition
+   Title block on top, photograph below as its own band.
+   No layering, no z-index magic, no masks.
    ========================================================= */
 .hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
   background: var(--limestone);
-  overflow: hidden;
-  padding: calc(var(--nav-h) + 24px) var(--gutter) 60px;
+  padding: calc(var(--nav-h) + 80px) var(--gutter) 80px;
 }
-.hero-stage {
-  position: relative;
+.hero-inner {
   max-width: var(--max);
   margin: 0 auto;
-  min-height: calc(100vh - var(--nav-h) - 84px);
 }
 
-/* Title — BEHIND the image */
+.hero-eyebrow { margin-bottom: 32px; }
+
 .hero-title {
-  position: relative;
-  z-index: 1;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(64px, 13vw, 200px);
-  line-height: 0.92;
-  letter-spacing: -0.025em;
+  font-size: clamp(56px, 10vw, 140px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
   color: var(--deep-earth);
   text-transform: uppercase;
-  margin-top: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 .hero-line { display: block; overflow: hidden; }
-.hero-line-2 { padding-left: 0; }
-.hero-line-3 { padding-left: 0; }
 .hero-word {
   display: inline-block;
   transform: translateY(110%);
   opacity: 0;
   transition: transform 1.1s var(--ease-soft), opacity 0.7s ease-out;
 }
-.hero-loaded .hero-line-1 .hero-word { transform: translateY(0); opacity: 1; transition-delay: 0.15s; }
-.hero-loaded .hero-line-2 .hero-word { transform: translateY(0); opacity: 1; transition-delay: 0.3s; }
-.hero-loaded .hero-line-3 .hero-word { transform: translateY(0); opacity: 1; transition-delay: 0.45s; }
+.hero-loaded .hero-line:nth-child(1) .hero-word { transform: translateY(0); opacity: 1; transition-delay: 0.15s; }
+.hero-loaded .hero-line:nth-child(2) .hero-word { transform: translateY(0); opacity: 1; transition-delay: 0.28s; }
+.hero-loaded .hero-line:nth-child(3) .hero-word { transform: translateY(0); opacity: 1; transition-delay: 0.41s; }
 
-/* Image — IN FRONT, building extends above the frame.
-   PNG has a transparent sky so the silhouette floats over the
-   limestone background. object-fit: contain keeps the proportions
-   and lets the transparent top area breathe past the title. */
-.hero-figure {
-  position: absolute;
-  top: -30px;             /* lifts the building above the title's top */
-  right: -3%;             /* slight right bleed past content */
-  width: 74%;
-  height: calc(100% + 30px);
-  z-index: 2;             /* above the title */
-  pointer-events: none;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 1.6s var(--ease-soft) 0.45s, transform 1.6s var(--ease-soft) 0.45s;
-}
-.hero-loaded .hero-figure { opacity: 1; transform: translateY(0); }
-.hero-figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: right bottom;
-  display: block;
-}
-
-/* Eyebrow under the title — small rule + supporting line */
 .hero-meta {
-  position: relative;
-  z-index: 1;
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 24px;
+  max-width: 640px;
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity 0.9s var(--ease) 0.7s, transform 0.9s var(--ease) 0.7s;
+  transition: opacity 0.9s var(--ease) 0.6s, transform 0.9s var(--ease) 0.6s;
 }
 .hero-loaded .hero-meta { opacity: 1; transform: translateY(0); }
 .hero-rule {
@@ -479,51 +443,39 @@ body.cursor-hover .cursor-ring {
   width: 56px;
   height: var(--line);
   background: var(--terracotta);
-  margin-top: 8px;
+  margin-top: 10px;
   flex-shrink: 0;
 }
 .hero-tag {
   font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  line-height: 1.7;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.85;
   color: var(--deep-earth);
+  opacity: 0.78;
 }
 
-/* Bottom corners */
-.hero-corner {
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--dusty-clay);
-  display: flex;
-  align-items: center;
-  gap: 14px;
+/* The photograph sits as its own full-width band directly under the hero text */
+.hero-photo {
+  background: var(--limestone);
+  padding: 0 var(--gutter);
+  overflow: hidden;
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.9s var(--ease) 0.9s, transform 0.9s var(--ease) 0.9s;
+  transform: translateY(28px);
+  transition: opacity 1.4s var(--ease-soft) 0.5s, transform 1.4s var(--ease-soft) 0.5s;
 }
-.hero-loaded .hero-corner { opacity: 1; transform: translateY(0); }
-.hero-corner-left  { left: 0; }
-.hero-corner-right { right: 0; }
-.hero-corner-line {
-  width: 28px;
-  height: var(--line);
-  background: var(--dusty-clay);
+.hero.hero-loaded + .hero-photo {
+  opacity: 1;
+  transform: translateY(0);
 }
-.hero-corner-arrow {
-  display: inline-block;
-  animation: bob 2.4s ease-in-out infinite;
-}
-@keyframes bob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(4px); }
+.hero-photo img {
+  width: 100%;
+  max-width: var(--max);
+  height: clamp(420px, 70vh, 760px);
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+  display: block;
 }
 
 /* =========================================================
@@ -802,7 +754,8 @@ body.cursor-hover .cursor-ring {
 }
 .footer-mark img {
   width: 100%;
-  filter: invert(96%) sepia(8%) saturate(213%) hue-rotate(0deg) brightness(98%) contrast(90%);
+  display: block;
+  filter: brightness(0) invert(0.94) sepia(0.08) saturate(1.5) hue-rotate(340deg);
 }
 .footer-name {
   font-family: 'Playfair Display', serif;
@@ -942,8 +895,8 @@ body.cursor-hover .cursor-ring {
 @media (max-width: 1024px) {
   :root { --gutter: 48px; --nav-h: 76px; }
 
-  .hero-title { font-size: clamp(64px, 14vw, 140px); }
-  .hero-figure { width: 60%; }
+  .hero-title { font-size: clamp(54px, 11vw, 110px); }
+  .hero-photo img { height: clamp(360px, 55vh, 600px); }
 
   .intro-grid { grid-template-columns: 1fr; gap: 48px; }
   .intro { padding: 100px var(--gutter) 80px; }
@@ -973,41 +926,19 @@ body.cursor-hover .cursor-ring {
   .nav-logo-name { display: none; }
   .nav-logo-mark { width: 36px; }
 
-  /* HERO — preserve layered effect on mobile */
-  .hero {
-    padding: calc(var(--nav-h) + 32px) 24px 40px;
-    min-height: 100vh;
-  }
-  .hero-stage {
-    min-height: calc(100vh - var(--nav-h) - 72px);
-  }
+  /* HERO — simple stack on mobile */
+  .hero { padding: calc(var(--nav-h) + 56px) 24px 56px; }
+  .hero-eyebrow { margin-bottom: 24px; }
   .hero-title {
-    font-size: clamp(56px, 17vw, 84px);
-    margin-top: 24px;
-    margin-bottom: 40px;
-    line-height: 0.9;
-  }
-  .hero-figure {
-    position: absolute;
-    top: auto;
-    bottom: 50px;
-    right: -16px;
-    width: 90%;
-    height: 62%;
-    z-index: 2;
-  }
-  .hero-figure img { object-position: right bottom; }
-  .hero-meta {
-    position: relative;
-    z-index: 3;
-    margin-top: 0;
+    font-size: clamp(48px, 13vw, 84px);
     margin-bottom: 32px;
+    line-height: 0.92;
   }
+  .hero-meta { gap: 18px; }
   .hero-rule { width: 36px; }
-  .hero-tag { font-size: 10px; }
-  .hero-corner-left,
-  .hero-corner-right { font-size: 9px; gap: 10px; }
-  .hero-corner-right { display: none; }
+  .hero-tag { font-size: 12px; }
+  .hero-photo { padding: 0 24px; }
+  .hero-photo img { height: clamp(320px, 50vh, 480px); }
 
   /* INTRO */
   .intro { padding: 80px 24px 64px; }
@@ -1055,9 +986,9 @@ body.cursor-hover .cursor-ring {
    Small phone (≤480px)
    ========================================================= */
 @media (max-width: 480px) {
-  .hero-title { font-size: clamp(48px, 16vw, 72px); }
-  .hero-figure { width: 100%; right: -12px; bottom: 30px; height: 56%; }
-  .hero-meta { margin-bottom: 28px; }
+  .hero-title { font-size: clamp(42px, 12vw, 64px); margin-bottom: 24px; }
+  .hero-photo { padding: 0 20px; }
+  .hero-photo img { height: clamp(280px, 45vh, 380px); }
 
   .intro-statement h2 { font-size: clamp(22px, 6vw, 28px); }
 
@@ -1086,5 +1017,5 @@ body.cursor-hover .cursor-ring {
   }
   html { scroll-behavior: auto; }
   .hero-word { transform: translateY(0); opacity: 1; }
-  .hero-figure, .hero-meta, .hero-corner { opacity: 1; transform: none; }
+  .hero-meta, .hero-photo { opacity: 1; transform: none; }
 }

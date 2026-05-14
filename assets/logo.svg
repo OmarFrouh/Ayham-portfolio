@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 44" fill="currentColor" aria-label="ARD">
-  <!-- A: angular strokes with cut foot -->
-  <path d="M 4 42 L 14 2 L 17 2 L 27 42 L 23.5 42 L 21 32 L 10 32 L 7.5 42 Z M 11 28.5 L 20 28.5 L 15.5 11 Z"/>
-  <!-- R: rounded crown, slanted leg -->
-  <path d="M 33 2 L 33 42 L 36.4 42 L 36.4 25 L 38.7 25 L 47.5 42 L 51.4 42 L 42.3 24.6 Q 49.5 23.2 49.5 13.6 Q 49.5 2 38 2 Z M 36.4 5.4 L 38 5.4 Q 45.8 5.4 45.8 13.6 Q 45.8 21.8 38 21.8 L 36.4 21.8 Z"/>
-  <!-- D: open curve, the bowl only -->
-  <path d="M 58 2 L 58 42 L 68 42 Q 85 42 85 22 Q 85 2 68 2 Z M 61.4 5.4 L 68 5.4 Q 81.3 5.4 81.3 22 Q 81.3 38.6 68 38.6 L 61.4 38.6 Z"/>
-</svg>
